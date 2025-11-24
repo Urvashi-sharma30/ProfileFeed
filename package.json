@@ -2,16 +2,18 @@
   "license": "0BSD",
   "main": "index.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "react-native start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios"
   },
   "dependencies": {
+    "@react-native-community/netinfo": "^11.4.1",
     "react": "19.1.1",
     "react-native": "0.82.1",
     "@react-native/new-app-screen": "0.82.1",
-    "react-native-safe-area-context": "^5.5.2"
+    "react-native-paper": "^5.14.5",
+    "react-native-safe-area-context": "^5.5.2",
+    "react-native-video": "^6.18.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

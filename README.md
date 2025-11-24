@@ -1,11 +1,19 @@
-# Sample Snack app
+# MyProject (React Native CLI)
 
-Open the `App.js` file to start writing some code. You can preview the changes directly on your phone or tablet by scanning the **QR code** or use the iOS or Android emulators. When you're done, click **Save** and share the link!
+This project now runs as a standard React Native app that relies solely on the
+React Native CLI tooling.
 
-When you're ready to see everything that Expo provides (or if you want to use your own editor) you can **Download** your project and use it with [expo cli](https://docs.expo.dev/get-started/installation/#expo-cli)).
+## Requirements
+- Node 20+
+- Android Studio (for Android builds) and/or Xcode (for iOS builds)
+- Watchman (macOS optional but recommended)
 
-All projects created in Snack are publicly available, so you can easily share the link to this project via link, or embed it on a web page with the `<>` button.
+## Common scripts
+- `npm run start` – launch Metro bundler
+- `npm run android` – build and install on an Android emulator/device
+- `npm run ios` – build and install on an iOS simulator/device (macOS only)
 
-If you're having problems, you can tweet to us [@expo](https://twitter.com/expo) or ask in our [forums](https://forums.expo.dev/c/expo-dev-tools/61) or [Discord](https://chat.expo.dev/).
-
-Snack is Open Source. You can find the code on the [GitHub repo](https://github.com/expo/snack).
+## Notes
+- Entry point is `index.js`, which registers `App` via `AppRegistry`.
+- Update native assets/icons directly in the `android` and `ios` folders as
+  needed.

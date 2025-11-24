@@ -2,7 +2,7 @@
  * VideoPlayer component
  * - Wraps the actual video player lib (react-native-video by default).
  * - Provides props: sourceUri, paused, onBuffer, onLoad, style
- * - If using Expo please replace Video import and props accordingly.
+ * - Swap the Video import if you prefer another player implementation.
  */
 
 import React from "react";

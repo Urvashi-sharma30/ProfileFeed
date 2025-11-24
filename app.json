@@ -1,29 +1,7 @@
 {
-  "expo": {
-    "name": "happy-orange-peanut",
-    "slug": "snack-0ae1900d-768f-4a52-b955-929543d0251f",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    }
+  "name": "MyProject",
+  "displayName": "MyProject",
+  "android": {
+    "package": "com.myproject"
   }
 }
