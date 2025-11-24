@@ -5,17 +5,23 @@
  * viewAreaCoveragePercentThreshold is set to 30 to match requirements.
  */
 
-import { useRef, useCallback } from "react";
+import { useCallback } from "react";
 
 export default function useViewability(onChange) {
-  const viewabilityConfig = { viewAreaCoveragePercentThreshold: 30, waitForInteraction: false };
+  const viewabilityConfig = {
+    itemVisiblePercentThreshold: 30,
+    waitForInteraction: false,
+    minimumViewTime: 120,
+  };
 
-  const onViewableItemsChanged = useRef(
+  const onViewableItemsChanged = useCallback(
     ({ viewableItems, changed }) => {
-      onChange && onChange(viewableItems, changed);
-    }
-  ).current;
+      if (typeof onChange === "function") {
+        onChange(viewableItems || [], changed || []);
+      }
+    },
+    [onChange]
+  );
 
-  // ensure stable references
-  return { viewabilityConfig, onViewableItemsChanged: useCallback(onViewableItemsChanged, []) };
+  return { viewabilityConfig, onViewableItemsChanged };
 }

@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 export default function useFetch(fetcher, deps = []) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     let mounted = true;
     (async () => {
@@ -20,7 +21,11 @@ export default function useFetch(fetcher, deps = []) {
         if (mounted) setLoading(false);
       }
     })();
-    return () => (mounted = false);
-  }, deps);
+
+    return () => {
+      mounted = false;
+    };
+  }, [fetcher, ...deps]);
+
   return { data, loading };
 }

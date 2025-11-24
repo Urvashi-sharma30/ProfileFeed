@@ -2,36 +2,42 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
   container: {
-    marginHorizontal: 12,
-    marginVertical: 8,
+    padding: 16,
     backgroundColor: "#fff",
-    borderRadius: 8,
-    overflow: "hidden",
-    elevation: 1,
-    shadowColor: "#000",
-    shadowOpacity: 0.06,
-    shadowRadius: 6
+    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomColor: "#e6e6e6"
   },
-  image: { width: "100%", height: 180, backgroundColor: "#eee" },
-  videoContainer: { width: "100%", height: 220, backgroundColor: "#000" },
-  loadingOverlay: {
-    position: "absolute",
-    top: 0, left: 0, right: 0, bottom: 0,
-    justifyContent: "center",
+  top: { flexDirection: "row", alignItems: "center" },
+  avatar: { width: 86, height: 86, borderRadius: 44, backgroundColor: "#ddd" },
+  info: { flex: 1, paddingLeft: 12 },
+  name: { fontSize: 18, fontWeight: "700" },
+  username: { color: "#777", marginTop: 2 },
+  bio: { color: "#666", marginTop: 6, fontSize: 13 },
+  location: { marginTop: 8, color: "#444", fontWeight: "600" },
+  stats: { flexDirection: "row", justifyContent: "space-around", marginTop: 12 },
+  stat: { alignItems: "center" },
+  statNumber: { fontWeight: "700", fontSize: 16 },
+  statLabel: { color: "#777", fontSize: 12 },
+  actions: {
+    flexDirection: "row",
+    marginTop: 16
+  },
+  primaryAction: {
+    flex: 1,
+    backgroundColor: "#111",
+    paddingVertical: 10,
+    borderRadius: 24,
+    alignItems: "center",
+    marginRight: 8
+  },
+  primaryActionText: { color: "#fff", fontWeight: "600" },
+  secondaryAction: {
+    flex: 1,
+    paddingVertical: 10,
+    borderRadius: 24,
+    borderWidth: 1,
+    borderColor: "#111",
     alignItems: "center"
   },
-  loadingText: { color: "#fff" },
-  body: { padding: 12 },
-  title: { fontSize: 16, fontWeight: "700", marginBottom: 6 },
-  desc: { color: "#666", fontSize: 14, lineHeight: 20 },
-  action: {
-    marginTop: 10,
-    alignSelf: "flex-start",
-    paddingHorizontal: 12,
-    paddingVertical: 8,
-    borderRadius: 20,
-    borderWidth: 1,
-    borderColor: "#ddd"
-  },
-  actionText: { color: "#333", fontWeight: "600" }
+  secondaryActionText: { color: "#111", fontWeight: "600" }
 });
